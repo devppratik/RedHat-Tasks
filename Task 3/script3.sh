@@ -1,11 +1,12 @@
-# Approach 1 : 
-# Time Complexity : 0(n)
-awk '{ sum += $1 } END { print sum }' random_numbers
+# Approach 1 - Assuming only the sum of digits
+# Time Complexity - O(n) where n : length of string
+# Subsitute every group of non-digits with ""
+# In the single string obtained loop for the sum
+# FS -> Field Separator
+awk '{for(i=1;i<=NF;i++)s+=$i} END{print s}' FS="" <<< $(awk '{gsub(/([^[:digit:]]+|)/,"",$0);printf $0}' nums.txt)
 
-# Approach 2
-# Time Complexity : 0(n)
-s=0;
-while read l; # Read operation is slower and thus takes more time even if TC is same
-do ((s+=l));
-done<random_numbers;
-echo $s;
+# Approach 2- Assuming group of digits as  integers/decimals
+# Time Complexity - O(n) where n : length of string
+# Subsitute every group of alphabets with newline
+# In the list of numbers obtained, add for sum
+awk '{ sum += $1 } END { print sum }' <<< $(awk '{ gsub(/([^[[:digit:].-]+|[^[:alnum:].-]+])/,"\n",$0); printf $0 }' nums.txt)

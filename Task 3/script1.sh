@@ -1,6 +1,4 @@
-# Splits the date into various components
-read YYYY month day hh mm ss <<<$(date  +'%Y %m %d %H %M %S') 
-
-# Print the result on the screen
-echo "Today is Day: $day Month: $month Year: $YYYY"
-echo "Time is Hour: $hh Minutes: $mm Seconds: $ss"
+# Splits the date into various components and prints them out
+# Time Complexity : O(1)
+# Space Complexity : O(1)
+echo -e $(date  +'Year:%Y Month:%m Day:%d \nHour:%H Minutes:%M Seconds:%S')

@@ -1,11 +1,4 @@
-# Approach 1
-# Time Complexity : 0(nlog(n))
-sort -u lines.txt # Output is sorted in alphabetical order
-
-# Approach 2
-# Time Complexity : 0(nlog(n))
-sort lines.txt | uniq # Output is sorted in alphabetical order
-
-# Approach 3
-# Time Complexity : 0(n)
-awk '!seen[$0]++' lines.txt # Output is in order of appearance in the file
+# Time Complexity : O(n)
+# Space Complexity : O(n)
+awk '{gsub(/\? |! |\. /,ORS)} 1' input.txt  > lines.txt # Split line by delimiter
+awk '!seen[$0]++' lines.txt # Get the unique lines from the total lines
