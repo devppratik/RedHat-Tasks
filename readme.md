@@ -22,4 +22,17 @@ This repo contains all my solutions for the RedHat Apprentice Tasks
   3. Find the sum of all numbers in a file in Linux
   ```
 
-  
+### **Go Tasks**
+  - Task 1 :
+  ```
+  1. Write a loop to ask the name , age and nationality from a user and print "Your name is ___  your age is ___ years old and your nationality is __"
+      i. This should be infinite loop
+
+  2. Define the following array "Menu"
+      i. Append to it the following item: "hamburger"
+      ii. Append to it the following item: "salad"
+      iii. Iterate over the list and print for each item Food: <Food name>. Make sure to replace <Food name> with item from the array
+
+  3. Define an array of 5 items
+      i.Iterate over it and print for each item the following: This is <ITEM> and its index in the array is <INDEX>
+  ```
