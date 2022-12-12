@@ -12,9 +12,9 @@ func taskOne() int64 {
 	num := random.GetRandom()
 	fmt.Printf("Random Number in [1, 100] is : %d\n", num)
 	if num > 50 {
-		fmt.Println("It's closer to 100")
+		fmt.Print("It's closer to 100 ")
 	} else {
-		fmt.Println("It's closer to 0")
+		fmt.Print("It's closer to 0")
 	}
 	return num
 }
@@ -23,7 +23,7 @@ func taskOne() int64 {
 func taskTwo() {
 	num := taskOne()
 	if num == 50 {
-		fmt.Println("it's 50")
+		fmt.Println("It's 50")
 	}
 }
 
@@ -31,6 +31,6 @@ func taskTwo() {
 func taskThree() {
 	num := taskOne()
 	if num > 50 && num%2 == 0 {
-		fmt.Println("and it's even!")
+		fmt.Print("and it's even!")
 	}
 }
