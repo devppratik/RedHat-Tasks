@@ -5,27 +5,34 @@ package main
 import "fmt"
 
 func main() {
-	isExit := "" // Exit Case Variable
+	// Exit Case Variable
+	isExit := ""
 	for isExit != "exit" {
-		var name, nationality string // String Variables to store Name & Natinality
-		var age int                  // Integer Variables to store Age
+		// String Variables to store Name & Natinality
+		var name, nationality string
+		// Integer Variables to store Age
+		var age int
 		fmt.Print("Enter Your Name: ")
 		fmt.Scan(&name)
-		for true { // Loop for integer input validation
+		// Loop for integer input validation
+		for true {
 			fmt.Print("Enter Your Age: ")
-			_, err := fmt.Scanf("%d", &age) // Taking input for age and storing the error
-			if err == nil && age > 0 {      // If no error in input i.e an positive integer, break loop
+			// Taking input for age and storing the error
+			_, err := fmt.Scanf("%d", &age)
+			// If no error in input i.e an positive integer, break loop
+			if err == nil && age > 0 {
 				break
 			}
 			fmt.Print("Not a valid age - try again\n\n")
-			var dump string   // String variable to store the remaining inputs to discard
-			fmt.Scanln(&dump) // Store and discard the input buffer
+			// String variable to store the remaining inputs to discard
+			var dump string
+			// Store and discard the input buffer
+			fmt.Scanln(&dump)
 		}
 		fmt.Print("Enter Your Nationality: ")
 		fmt.Scanln(&nationality)
 		fmt.Printf("Your name is %s. Your age is %d years old and your nationality is %s \n", name, age, nationality)
 		fmt.Print("\nPress Enter to continue or Type exit to exit ")
 		fmt.Scanln(&isExit)
-
 	}
 }
