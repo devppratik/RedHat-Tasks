@@ -48,3 +48,8 @@ This repo contains all my solutions for the RedHat Apprentice Tasks
 
 3. Modify the conditional in the code you previously wrote to check not only if the  number is higher than 50 but also if it's even. If it's even and higher than 50, print,"It's closer to 100 and it's even!"
 ```
+
+  - Task 3 :
+  ```
+  Build a simple web server in go. Use your creativity to enhance it.
+  ```
