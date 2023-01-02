@@ -2,16 +2,13 @@ package main
 
 import (
 	"os"
-	"path/filepath"
 )
 
-// Getting current directory
-var DIR, _ = filepath.Abs(filepath.Dir(os.Args[0]))
-var HOME = DIR + "/data/homepage.txt"
+var HOME = "./data/homepage.txt"
 
 // Function to Save Files
 func (p *Page) save() error {
-	filename := DIR + "/data/" + p.Title + ".txt"
+	filename := "./data/" + p.Title + ".txt"
 	// Append File Name to Homepage.txt to mainayin list of articles
 	f, err := os.OpenFile(HOME, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0600)
 	if err != nil {
@@ -29,7 +26,7 @@ func (p *Page) save() error {
 
 // Function to Read and Load Files
 func loadPage(title string) (*Page, error) {
-	filename := DIR + "/data/" + title + ".txt"
+	filename := "./data/" + title + ".txt"
 	body, err := os.ReadFile(filename)
 	if err != nil {
 		return nil, err
