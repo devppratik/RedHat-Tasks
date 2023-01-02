@@ -50,7 +50,7 @@ func saveHandler(res http.ResponseWriter, req *http.Request, title string) {
 }
 
 // Load all the templates from the template dir
-var templates = template.Must(template.ParseFiles("./templates/edit.html", "./templates/view.html", "./templates/home.html"))
+var templates = template.Must(template.ParseGlob("templates/*"))
 
 // Rendering dynamic templates
 func renderTemplate(res http.ResponseWriter, tmpl string, page *Page) {
