@@ -1,3 +1,3 @@
-module github.com/devppratik/RedHat-Tasks/GoTask3
+module goserver
 
 go 1.19

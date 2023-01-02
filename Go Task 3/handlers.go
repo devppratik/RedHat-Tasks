@@ -2,6 +2,8 @@ package main
 
 import (
 	"net/http"
+	"os"
+	"path/filepath"
 	"text/template"
 )
 
@@ -49,8 +51,11 @@ func saveHandler(res http.ResponseWriter, req *http.Request, title string) {
 	http.Redirect(res, req, "/view/"+title, http.StatusFound)
 }
 
+// Getting current directory
+var TEMP_DIR, _ = filepath.Abs(filepath.Dir(os.Args[0]))
+
 // Load all the templates from the template dir
-var templates = template.Must(template.ParseFiles("templates/edit.html", "templates/view.html", "templates/home.html"))
+var templates = template.Must(template.ParseFiles(TEMP_DIR+"/templates/edit.html", TEMP_DIR+"/templates/view.html", TEMP_DIR+"/templates/home.html"))
 
 // Rendering dynamic templates
 func renderTemplate(res http.ResponseWriter, tmpl string, page *Page) {
