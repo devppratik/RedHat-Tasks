@@ -30,11 +30,6 @@ func EncodeString(input string, format string) (result string) {
 }
 
 func DecodeString(input string, format string) (result string) {
-	// if format == "binary" {
-	// 	for _, c := range input {
-	// 		result = fmt.Sprintf("%s%.8b", result, c)
-	// 	}
-	// }
 	if format == "ascii" {
 		ascii85.Decode([]byte(result), []byte(input), true)
 	}

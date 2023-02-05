@@ -24,9 +24,9 @@ mod:
 vendor:
 	go mod vendor
 
-# .PHONY: test
-# test: mod vendor
-# 	go test ./... -covermode=atomic -coverpkg=./... -v
+.PHONY: test
+test: mod vendor
+	go test ./tests -v
 
 .PHONY: lint
 lint: getlint
