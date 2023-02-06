@@ -37,12 +37,9 @@ This command will build the PagerDuty CLI binary, named `strman`. This binary wi
 
 ```
 $ make build
-```Example:
-
 ```
-$ mkdir $GOPATH/src/github.com/openshift/pagerduty-short-circuiter
-$ cd $GOPATH/src/github.com/openshift/pagerduty-short-circuiter
-$ git clone https://github.com/openshift/pagerduty-short-circuiter.git .
+
+## Running the CLI
 To list all commands:
 ```shell
 $ strman help
