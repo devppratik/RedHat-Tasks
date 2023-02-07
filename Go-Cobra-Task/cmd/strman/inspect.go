@@ -12,6 +12,7 @@ var inspectCmd = &cobra.Command{
 	Use:     "inspect",
 	Aliases: []string{"insp"},
 	Short:   "Inspects a string",
+	Long:    "Inspects a string & returns its length. Passing the digit flag analyzes the number of digits in the string",
 	Args:    cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 

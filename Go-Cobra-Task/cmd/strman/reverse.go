@@ -10,7 +10,7 @@ import (
 var reverseCmd = &cobra.Command{
 	Use:     "reverse",
 	Aliases: []string{"rev"},
-	Short:   "Reverses a string",
+	Short:   "Reverses the given input",
 	Args:    cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		res := strman.Reverse(args[0])

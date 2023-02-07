@@ -12,7 +12,7 @@ import (
 var jsonPrettyCmd = &cobra.Command{
 	Use:     "jsonpretty",
 	Aliases: []string{"json"},
-	Short:   "Encodes the string into specific format",
+	Short:   "Pretty Prints the JSON from the file specified",
 	Args:    cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		src, _ := os.ReadFile(args[0])
